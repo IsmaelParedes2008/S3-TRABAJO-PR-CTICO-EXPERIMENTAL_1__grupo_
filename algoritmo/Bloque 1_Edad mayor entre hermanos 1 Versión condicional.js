@@ -37,7 +37,7 @@ if (edad1 >= edad2 && edad1 >= edad3) {
 }
 console.log(`El hermano mayor tiene ${mayor} años.`);
 }
-CONDICIONAL()
+condicional()
 
 
 // PSEUDOCODIGO EN VERSION REPETITIVA
@@ -147,4 +147,5 @@ function arreglos(){
     }
 }
 arreglos()
+
 

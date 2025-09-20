@@ -208,4 +208,5 @@ function arreglos(){
         alert(`Celular ${c+1}: Marca ${marca}, Capacidad ${capacidad}GB, Precio final $${precioFinal}`);
     }
 }
+arreglos()
 

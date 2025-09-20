@@ -1,18 +1,29 @@
-//   marca="samsung", capacidad=64 → precioFinal = precioInicial + 50
-//   marca="samsung", capacidad=128 → precioFinal = precioInicial + 80
-//   marca="apple", capacidad=64 → precioFinal = precioInicial + 100
-//   marca="apple", capacidad=128 → precioFinal = precioInicial + 150
-//   marca="xiaomi", capacidad=64 → precioFinal = precioInicial - 20
-//   marca="xiaomi", capacidad=128 → precioFinal = precioInicial - 10
-//Entrada: leer(marca), leer(capacidad), precioInicial fijo=300.
-//Proceso: si marca="samsung" y capacidad=64 entonces precioFinal=precioInicial+50
-//         sino si marca="samsung" y capacidad=128 entonces precioFinal=precioInicial+80
-//         sino si marca="apple" y capacidad=64 entonces precioFinal=precioInicial+100
-//         sino si marca="apple" y capacidad=128 entonces precioFinal=precioInicial+150
-//         sino si marca="xiaomi" y capacidad=64 entonces precioFinal=precioInicial-20
-//         sino si marca="xiaomi" y capacidad=128 entonces precioFinal=precioInicial-10
-//Salida: "escribir el precio final"
+// PSEUDOCODIGO
+Algoritmo PrecioFinalCelular_Condicional
+    // Entrada
+    Leer marca  // Samsung, Apple, Xiaomi
+    Leer capacidad  // 64 o 128 GB
+    precioInicial ← 300
+    precioFinal ← 0
 
+    // Proceso
+    Si marca = "Samsung" Y capacidad = 64 Entonces
+        precioFinal ← precioInicial + 50
+    Sino Si marca = "Samsung" Y capacidad = 128 Entonces
+        precioFinal ← precioInicial + 80
+    Sino Si marca = "Apple" Y capacidad = 64 Entonces
+        precioFinal ← precioInicial + 100
+    Sino Si marca = "Apple" Y capacidad = 128 Entonces
+        precioFinal ← precioInicial + 150
+    Sino Si marca = "Xiaomi" Y capacidad = 64 Entonces
+        precioFinal ← precioInicial - 20
+    Sino Si marca = "Xiaomi" Y capacidad = 128 Entonces
+        precioFinal ← precioInicial - 10
+    Sino
+        Escribir "Datos ingresados incorrectos"
+    FinSi
+
+//JAVASCRIPT
 // version condicional
 function condicional() {
 
@@ -43,6 +54,42 @@ console.log(`El precio final del celular es: $${precioFinal}`);
 }
 condicional()
 
+
+//PSEUDOCODIGO EN VERSION REPETITIVA
+Algoritmo PrecioFinalCelular_Repetitiva
+    // Entrada
+    Leer N  // Número de celulares a vender
+    precioInicial ← 300
+
+    Para i ← 1 Hasta N Hacer
+        Leer marca
+        Leer capacidad
+        precioFinal ← precioInicial
+
+        // Proceso
+        Si marca = "Samsung" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal + 50
+        Sino Si marca = "Samsung" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal + 80
+        Sino Si marca = "Apple" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal + 100
+        Sino Si marca = "Apple" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal + 150
+        Sino Si marca = "Xiaomi" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal - 20
+        Sino Si marca = "Xiaomi" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal - 10
+        Sino
+            Escribir "Datos incorrectos para el celular ", i
+            Continuar // Saltar al siguiente ciclo
+        FinSi
+
+        // Salida
+        Escribir "Celular ", i, ": Marca ", marca, ", Capacidad ", capacidad, "GB, Precio final $", precioFinal
+    FinPara
+FinAlgoritmo
+
+//JAVASCRIPT
 // version repetitiva
 function repetitiva(){
 
@@ -80,6 +127,48 @@ for (let i = 1; i <= N; i++) {
 }
 repetitiva()
 
+
+//PSEUDOCODIGO EN ARREGLOS
+Algoritmo PrecioFinalCelular_Arreglos
+    // Entrada: arreglos de celulares [marca, capacidad]
+    Definir celulares[6][2]
+    celulares ← [
+        ["Samsung", 64],
+        ["Samsung", 128],
+        ["Apple", 64],
+        ["Apple", 128],
+        ["Xiaomi", 64],
+        ["Xiaomi", 128]
+    ]
+    precioInicial ← 300
+    Definir precioFinal, marca, capacidad Como Real o Texto
+
+    // Proceso
+    Para c ← 0 Hasta 5 Hacer
+        marca ← celulares[c][0]
+        capacidad ← celulares[c][1]
+        precioFinal ← precioInicial
+
+        Si marca = "Samsung" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal + 50
+        Sino Si marca = "Samsung" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal + 80
+        Sino Si marca = "Apple" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal + 100
+        Sino Si marca = "Apple" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal + 150
+        Sino Si marca = "Xiaomi" Y capacidad = 64 Entonces
+            precioFinal ← precioFinal - 20
+        Sino Si marca = "Xiaomi" Y capacidad = 128 Entonces
+            precioFinal ← precioFinal - 10
+        FinSi
+
+        // Salida
+        Escribir "Celular ", c+1, ": Marca ", marca, ", Capacidad ", capacidad, "GB, Precio final $", precioFinal
+    FinPara
+FinAlgoritmo
+
+//JAVASCRIPT
 // version con arreglos
 function arreglos(){
 
@@ -119,4 +208,4 @@ function arreglos(){
         alert(`Celular ${c+1}: Marca ${marca}, Capacidad ${capacidad}GB, Precio final $${precioFinal}`);
     }
 }
-arreglos()
+

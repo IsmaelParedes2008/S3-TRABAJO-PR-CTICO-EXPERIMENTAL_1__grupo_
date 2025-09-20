@@ -1,17 +1,33 @@
-//   usuarios=120 → costoTotal=120*5=600, costoPorUsuario=5
-//   usuarios=80 → costoTotal=80*6=480, costoPorUsuario=6
-//   usuarios=40 → costoTotal=40*8=320, costoPorUsuario=8
-//   usuarios=20 → costoTotal=300, costoPorUsuario=300
-//Entrada: leer(usuarios).
-//Proceso: si usuarios >= 100 entonces costoTotal=usuarios*5
-//   sino si usuarios >= 50 entonces costoTotal=usuarios*6
-//   sino si usuarios >= 30 entonces costoTotal=usuarios*8
-//   sino costoTotal=300
-//   si usuarios >= 30 entonces costoPorUsuario=costoTotal/usuarios
-//   sino costoPorUsuario=costoTotal
-//Salida: "escribir costoTotal y costoPorUsuario"
+//PSEUDOCODIGO
+Algoritmo CostoGrupo_Condicional
+    // Entrada
+    Leer usuarios
+    costoTotal ← 0
+    costoPorUsuario ← 0
 
+    // Proceso
+    Si usuarios >= 100 Entonces
+        costoTotal ← usuarios * 5
+    Sino Si usuarios >= 50 Y usuarios <= 99 Entonces
+        costoTotal ← usuarios * 6
+    Sino Si usuarios >= 30 Y usuarios <= 49 Entonces
+        costoTotal ← usuarios * 8
+    Sino
+        costoTotal ← 300
+    FinSi
 
+    Si usuarios >= 30 Entonces
+        costoPorUsuario ← costoTotal / usuarios
+    Sino
+        costoPorUsuario ← costoTotal
+    FinSi
+
+    // Salida
+    Escribir "Costo total del grupo: $", costoTotal
+    Escribir "Costo por usuario: $", costoPorUsuario
+FinAlgoritmo
+
+//JAVASCRIPT
 // version condicional
 function condicional(){
 
@@ -37,6 +53,39 @@ console.log(`Costo por usuario: $${costoPorUsuario.toFixed(2)}`);
 }
 condicional()
 
+
+//PSEUDOCODIGO EN VERSION REPETITIVA
+Algoritmo CostoGrupo_Repetitiva
+    // Entrada
+    Leer N  // Cantidad de grupos
+    Definir usuarios, costoTotal, costoPorUsuario Como Real
+
+    Para i ← 1 Hasta N Hacer
+        Leer usuarios
+
+        // Proceso
+        Si usuarios >= 100 Entonces
+            costoTotal ← usuarios * 5
+        Sino Si usuarios >= 50 Y usuarios <= 99 Entonces
+            costoTotal ← usuarios * 6
+        Sino Si usuarios >= 30 Y usuarios <= 49 Entonces
+            costoTotal ← usuarios * 8
+        Sino
+            costoTotal ← 300
+        FinSi
+
+        Si usuarios >= 30 Entonces
+            costoPorUsuario ← costoTotal / usuarios
+        Sino
+            costoPorUsuario ← costoTotal
+        FinSi
+
+        // Salida
+        Escribir "Grupo ", i, ": Costo total $", costoTotal, ", Costo por usuario $", costoPorUsuario
+    FinPara
+FinAlgoritmo
+
+//JAVASCRIPT
 // version repetitiva
 function repetitiva(){
 
@@ -63,6 +112,41 @@ for (let i = 1; i <= N; i++) {
 }
 repetitiva()
 
+
+//PSEUDOCODIGO EN ARREGLOS
+Algoritmo CostoGrupo_Arreglos
+    // Entrada: arreglo de grupos
+    Definir grupos[4]  // Cantidad de usuarios en cada grupo
+    grupos ← [120, 80, 40, 20]
+    Definir usuarios, costoTotal, costoPorUsuario Como Real
+
+    // Proceso: recorrer cada grupo
+    Para c ← 0 Hasta 3 Hacer
+        usuarios ← grupos[c]
+
+        // Aplicar reglas
+        Si usuarios >= 100 Entonces
+            costoTotal ← usuarios * 5
+        Sino Si usuarios >= 50 Entonces
+            costoTotal ← usuarios * 6
+        Sino Si usuarios >= 30 Entonces
+            costoTotal ← usuarios * 8
+        Sino
+            costoTotal ← 300
+        FinSi
+
+        Si usuarios >= 30 Entonces
+            costoPorUsuario ← costoTotal / usuarios
+        Sino
+            costoPorUsuario ← costoTotal
+        FinSi
+
+        // Salida
+        Escribir "Grupo ", c+1, ": Usuarios ", usuarios, ", Costo total $", costoTotal, ", Costo por usuario $", costoPorUsuario
+    FinPara
+FinAlgoritmo
+
+//JAVASCRIPT
 // version con arreglos
 function arreglos(){
     
@@ -92,3 +176,4 @@ function arreglos(){
     }
 }
 arreglos()
+

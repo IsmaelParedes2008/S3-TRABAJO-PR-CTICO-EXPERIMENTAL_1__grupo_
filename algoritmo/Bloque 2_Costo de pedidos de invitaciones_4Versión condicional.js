@@ -37,7 +37,7 @@ costoTotal = cantidad * costoUnitario;
 
 console.log(`El costo total del pedido es $${costoTotal.toFixed(2)}`);
 }
-
+condicional()
 
 // PSEUDOODIGO EN VERSION REPPETITIVA
 Algoritmo CostoPedido_Repetitiva
@@ -87,7 +87,7 @@ for (let i = 1; i <= N; i++) {
     console.log(`El costo total del pedido ${i} es $${costoTotal.toFixed(2)}`);
 }
 }
-
+repetitiva()
 
 // PSEUDOCODIGO EN ARREGLOS
 Algoritmo CostoPedido_Arreglos
@@ -140,5 +140,6 @@ for (c = 0; c < pedidos.length; c++) {
      alert(`Pedido ${c+1}: Cantidad ${cantidad}, Costo total $${costoTotal.toFixed(2)}`);
     }
 }
+arreglos()
 
 

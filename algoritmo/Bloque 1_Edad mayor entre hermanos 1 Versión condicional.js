@@ -1,12 +1,25 @@
-//   edad1=30, edad2=20, edad3=10
-//   edad1=20, edad2=30, edad3=10
-//   edad1=10, edad2=20, edad3=30
-//Entrada: leer(edad1), leer(edad2), leer(edad3).
-//Proceso: si edad1 > edad2 y edad1 > edad3 entonces escribir edad1
-//         sino si edad2 > edad1 y edad2 > edad3 entonces escribir edad2
-//         sino escribir edad3
-//Salida: "escribir la edad mayor"
+// PSEUDOCODIGO
+Algoritmo HermanoMayor_Condicional
+    // Entrada
+    Leer edad1
+    Leer edad2
+    Leer edad3
 
+    // Proceso
+    mayor ← edad1
+    Si edad2 > mayor Entonces
+        mayor ← edad2
+    FinSi
+    Si edad3 > mayor Entonces
+        mayor ← edad3
+    FinSi
+
+    // Salida
+    Escribir "El hermano mayor tiene ", mayor, " años."
+FinAlgoritmo
+
+
+//JAVASCRIPT
 // VERSION CONDICIONAL
 function condicional(){
 let edad1 = parseInt(prompt("Ingrese la edad del primer hermano:"));
@@ -26,6 +39,33 @@ console.log(`El hermano mayor tiene ${mayor} años.`);
 }
 CONDICIONAL()
 
+
+// PSEUDOCODIGO EN VERSION REPETITIVA
+Algoritmo HermanoMayor_Repetitiva
+    // Entrada
+    Leer N  // Cantidad de grupos de hermanos
+
+    Para i ← 1 Hasta N Hacer
+        Leer edad1
+        Leer edad2
+        Leer edad3
+
+        // Proceso
+        mayor ← edad1
+        Si edad2 > mayor Entonces
+            mayor ← edad2
+        FinSi
+        Si edad3 > mayor Entonces
+            mayor ← edad3
+        FinSi
+
+        // Salida
+        Escribir "El hermano mayor del grupo ", i, " tiene ", mayor, " años."
+    FinPara
+FinAlgoritmo
+
+
+// JAVASCRIPT
 // version repetitiva
 function repetitiva(){
 let N = parseInt(prompt("Ingrese la cantidad de grupos de hermanos:"));
@@ -52,7 +92,38 @@ for (let i = 1; i <= N; i++) {
  }
  repetitiva()
 
-// version con arreglos
+
+ // PSEUDOCODIGO EN VERSION DE ARREGLOS
+ Algoritmo HermanoMayor_Arreglos
+    // Entrada: Definir arreglo de grupos de edades
+    Definir edades[3][3] // 3 grupos de 3 hermanos
+    edades[0] ← [30, 20, 10]
+    edades[1] ← [20, 25, 10]
+    edades[2] ← [1, 2, 3]
+
+    // Proceso: recorrer cada grupo
+    Para c ← 0 Hasta 2 Hacer
+        edad1 ← edades[c][0]
+        edad2 ← edades[c][1]
+        edad3 ← edades[c][2]
+
+        // Comparar las edades dentro del grupo
+        Si edad1 > edad2 Y edad1 > edad3 Entonces
+            mayor ← edad1
+        Sino Si edad2 > edad1 Y edad2 > edad3 Entonces
+            mayor ← edad2
+        Sino
+            mayor ← edad3
+        FinSi
+
+        // Salida: mostrar resultado por grupo
+        Escribir "La mayor edad del grupo ", c+1, " es: ", mayor
+    FinPara
+FinAlgoritmo
+
+
+// JAVASCRIPT
+ // version con arreglos
 function arreglos(){
     // Entrada: declarar variables
     let eda1 = 0, eda2 = 0, eda3 = 0, edad = [], c;
@@ -76,3 +147,4 @@ function arreglos(){
     }
 }
 arreglos()
+

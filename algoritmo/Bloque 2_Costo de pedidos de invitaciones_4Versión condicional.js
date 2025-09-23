@@ -103,7 +103,7 @@ Algoritmo CostoPedido_Arreglos
         // Aplicar reglas de precio
         Si cantidad <= 200 Entonces
             costoUnitario ← 2.00
-        Sino Si cantidad <= 300 Entonces
+        Sino Si cantidad >= 201 Y cantidad <= 300 Entonces
             costoUnitario ← 1.80
         Sino
             costoUnitario ← 1.50
@@ -130,7 +130,7 @@ for (c = 0; c < pedidos.length; c++) {
      // Proceso: aplicar reglas de precio
      if (cantidad <= 200) {
             costoUnitario = 2.00;
-     } else if (cantidad <= 300) {
+    } else if (cantidad >= 201 && cantidad <= 300) {
             costoUnitario = 1.80;
      } else {
             costoUnitario = 1.50;
@@ -141,6 +141,7 @@ for (c = 0; c < pedidos.length; c++) {
     }
 }
 arreglos()
+
 
 
 

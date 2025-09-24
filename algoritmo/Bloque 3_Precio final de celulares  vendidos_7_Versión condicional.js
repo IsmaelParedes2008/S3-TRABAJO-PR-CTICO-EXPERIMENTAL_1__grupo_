@@ -143,7 +143,6 @@ Algoritmo PrecioFinalCelular_Arreglos
             precioFinal ← precioFinal + 30
         Sino Si marca = "Xiaomi" Y capacidad = 64 Entonces
             precioFinal ← precioFinal - 30
-        Sino Si marca = "Xiaomi" Y capacidad = 128 Entonces
             precioFinal ← precioFinal - 50
         FinSi
 
@@ -187,5 +186,6 @@ function arreglos(){
     }
 }
 arreglos()
+
 
 

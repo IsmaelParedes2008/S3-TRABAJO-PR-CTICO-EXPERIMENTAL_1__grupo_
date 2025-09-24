@@ -45,7 +45,7 @@ condicional()
 Algoritmo HermanoMayor_Repetitiva
     // Entrada
      definir edad1, edad2, edad3, mayor, N como entero
-  escribir "ingrese ña cantidad de grupos de tres hermanos" Leer N  // Cantidad de grupos de hermanos
+  escribir "ingrese la cantidad de grupos de tres hermanos" Leer N  // Cantidad de grupos de hermanos
    Para i ← 1 Hasta N Hacer
   escribir"ingrese la edad del primer hermano" Leer edad1
   escribir"ingrese la edad del segundo hermnao" Leer edad2
@@ -152,6 +152,7 @@ function arreglos(){
     }
 }
 arreglos()
+
 
 
 

@@ -2,7 +2,7 @@
 Algoritmo CostoPedido_Condicional
     // Entrada
  definir cantidad, costototal, costounitario como real
-  escriba"ingrese la cantidad de tarjetas"
+  escribir"ingrese la cantidad de tarjetas"
 Leer cantidad
 
     // Proceso
@@ -49,7 +49,7 @@ escribir"ingrese la cantidad de pedidos"
 Leer N  // Cantidad de pedidos
 
 Para i ← 1 Hasta N Hacer
-escriba"ingrese la cantidad de tarjetas"
+escribir "ingrese la cantidad de tarjetas"
  Leer cantidad
 
         // Proceso
@@ -146,6 +146,7 @@ for (c = 0; c < pedidos.length; c++) {
     }
 }
 arreglos()
+
 
 
 

@@ -56,7 +56,7 @@ Algoritmo PrecioFinalCelular_Repetitiva
     // Entrada
     definir precioFinal, precioinicial como real
     definir N como entera
-    escribir "ingrese el nuemero de celulares a vender"
+    escribir "ingrese el numero de celulares a vender"
     Leer N  // Número de celulares a vender
     precioInicial ← 300
 
@@ -187,4 +187,5 @@ function arreglos(){
     }
 }
 arreglos()
+
 

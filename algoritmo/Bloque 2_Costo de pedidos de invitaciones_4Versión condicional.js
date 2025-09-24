@@ -1,7 +1,9 @@
 // pseudocodigo
 Algoritmo CostoPedido_Condicional
     // Entrada
-    Leer cantidad
+ definir cantidad, costototal, costounitario como real
+  escriba"ingrese la cantidad de tarjetas"
+Leer cantidad
 
     // Proceso
     Si cantidad <= 200 Entonces
@@ -42,10 +44,13 @@ condicional()
 // PSEUDOODIGO EN VERSION REPPETITIVA
 Algoritmo CostoPedido_Repetitiva
     // Entrada
-    Leer N  // Cantidad de pedidos
+     definir cantidad, costototal, costounitario, N como real
+escribir"ingrese la cantidad de pedidos"
+Leer N  // Cantidad de pedidos
 
-    Para i ← 1 Hasta N Hacer
-        Leer cantidad
+Para i ← 1 Hasta N Hacer
+escriba"ingrese la cantidad de tarjetas"
+ Leer cantidad
 
         // Proceso
         Si cantidad <= 200 Entonces
@@ -141,6 +146,7 @@ for (c = 0; c < pedidos.length; c++) {
     }
 }
 arreglos()
+
 
 
 

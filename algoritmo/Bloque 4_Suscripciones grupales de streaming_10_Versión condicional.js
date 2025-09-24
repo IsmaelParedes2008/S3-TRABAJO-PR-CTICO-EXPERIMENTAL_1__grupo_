@@ -1,6 +1,8 @@
 //PSEUDOCODIGO
 Algoritmo CostoGrupo_Condicional
     // Entrada
+    definir usuarios, costototal, costoporusuario
+    escribir "ingrese la cantidad de usuarios"
     Leer usuarios
     costoTotal ← 0
     costoPorUsuario ← 0
@@ -57,11 +59,13 @@ condicional()
 //PSEUDOCODIGO EN VERSION REPETITIVA
 Algoritmo CostoGrupo_Repetitiva
     // Entrada
-    Leer N  // Cantidad de grupos
     Definir usuarios, costoTotal, costoPorUsuario Como Real
-
+    escribir "ingrese la canditad de grupos"
+    Leer N  // Cantidad de grupos
+  
     Para i ← 1 Hasta N Hacer
-        Leer usuarios
+    escribir "ingrese la cantidad de usuarios"
+    Leer usuarios
 
         // Proceso
         Si usuarios >= 100 Entonces
@@ -176,5 +180,6 @@ function arreglos(){
     }
 }
 arreglos()
+
 
 

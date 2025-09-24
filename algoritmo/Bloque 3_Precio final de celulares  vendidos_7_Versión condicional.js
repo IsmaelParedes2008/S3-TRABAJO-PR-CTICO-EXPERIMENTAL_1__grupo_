@@ -1,7 +1,10 @@
 //pseudocodigo
 Algoritmo PrecioFinalCelular_Condicional
     // Entrada
+    definir precioFinal, precioinicial como real
+    escribir "ingrese la marca de su dispositivo movil (samsung,xiaomi)"
     Leer marca  // Samsung, Xiaomi
+    escribir "ingrese la capacidad de su dispositivo movil (64 o 128)"
     Leer capacidad  // 64 o 128 GB
     precioInicial ← 300
     precioFinal ← 0
@@ -51,12 +54,17 @@ condicional()
 //PSEUDOCODIGO EN VERSION REPETITIVA
 Algoritmo PrecioFinalCelular_Repetitiva
     // Entrada
+    definir precioFinal, precioinicial como real
+    definir N como entera
+    escribir "ingrese el nuemero de celulares a vender"
     Leer N  // Número de celulares a vender
     precioInicial ← 300
 
     Para i ← 1 Hasta N Hacer
-        Leer marca
-        Leer capacidad
+    escribir "ingrese la marca de su dispositivo movil (samsung,xiaomi)"
+    Leer marca  // Samsung, Xiaomi
+    escribir "ingrese la capacidad de su dispositivo movil (64 o 128)"
+    Leer capacidad  // 64 o 128 GB
         precioFinal ← precioInicial
 
         // Proceso
@@ -179,3 +187,4 @@ function arreglos(){
     }
 }
 arreglos()
+
